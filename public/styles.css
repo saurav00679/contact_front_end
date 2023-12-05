@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  background-image: url(http://www.transparenttextures.com/patterns/cubes.png);
+  padding: 0 16px;
+}
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
+}
+.keypad button {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.in_show{
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+}
+*{
+  text-align: center;
+}
+.details {
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  background-color: #93b922;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.contact_details{
+  text-align: left;
+  display: flex;
+}
+.no_contacts{
+  color: red;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+.contacts {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+.ShowContact {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.clear_btn{
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.input-clear{
+    display: flex;
+    justify-content: center;
+}
