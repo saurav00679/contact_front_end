@@ -86,7 +86,7 @@ header {
 }
 
 .contacts {
-  height: 200px;
+  height: 100px;
   overflow-y: auto;
   margin-top: 20px;
 }
