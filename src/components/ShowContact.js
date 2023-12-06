@@ -12,12 +12,25 @@ const ShowContact = (props)=>{
       top: '40%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-      width: 400,
+      width: 500,
       background: '#fff',
       border: '2px solid #000',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       padding: 16,
     };
+
+    const smallScreenStyle = {
+      width: '90%',
+      padding: 12,
+    };
+
+    const extraSmallScreenStyle = {
+      width: '95%',
+      padding: 8,
+    };
+    
+    style['@media (max-width: 600px)'] = smallScreenStyle;
+    style['@media (max-width: 400px)'] = extraSmallScreenStyle;
 
     const handleOpen = (contact) =>{
       setContact(contact);
@@ -45,12 +58,10 @@ const ShowContact = (props)=>{
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Contact Details
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <div className="contact_details">
-              <p><strong>Name</strong> {contact?.name}</p><br/>
-              <p><strong>Contact</strong> {contact?.contact_number}</p><br/>
-              <p><strong>Email</strong> {contact?.email}</p>
-            </div>
+          <Typography id="modal-modal-description" className="contact_details" sx={{ mt: 2 }}>
+              <p><strong>Name</strong>: {contact?.name}</p><br/>
+              <p><strong>Contact</strong>: {contact?.contact_number}</p><br/>
+              <p><strong>Email</strong>: {contact?.email}</p>
           </Typography>
         </Box>
       </Modal>

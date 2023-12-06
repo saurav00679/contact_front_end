@@ -19,12 +19,7 @@ const Contacts = ()=>{
         }
       };
 
-      if(search!==''){
-        fetchData();
-      } else{
-        setContacts([]);
-      }
-
+      search !== '' ? fetchData() : setContacts([]);
     }, [search]);
     
 
@@ -44,6 +39,7 @@ const Contacts = ()=>{
     <>
       <Header />
 
+      <div className="items">
       {
         contacts.length > 0 ? 
         <div className="contacts">
@@ -53,7 +49,7 @@ const Contacts = ()=>{
       }
 
       <div className="input-clear">
-        <input className='in_show' value={search} placeholder="Enter Number to search" onChange={handleChange}></input>
+        <input className='in_show' value={search} placeholder="Enter to search..." onChange={handleChange}></input>
         <button className="clear_btn" onClick={()=>setSearch('')}><ClearIcon/></button>
       </div>
       
@@ -63,6 +59,9 @@ const Contacts = ()=>{
           <Button key={btn} value={btn} handleClick={handleClick} />
         ))}
       </div>
+      </div>
+
+      
     </>)
 }
 
