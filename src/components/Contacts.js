@@ -13,7 +13,7 @@ const Contacts = ()=>{
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get('http://127.0.0.1:3000/contacts', { params: { searchKey: search } });
+        const result = await axios.get('http://172.20.10.5:3000/contacts', { params: { searchKey: search } });
         setContacts(result.data);
       } catch (error) {
         alert('Error fetching data:', error);
