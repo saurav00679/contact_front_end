@@ -79,16 +79,18 @@ header {
 
 .no_contacts {
   color: red;
-  border: 1px solid #ddd;
   padding: 10px;
   border-radius: 10px;
   margin-top: 20px;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .contacts {
   height: 100px;
   overflow-y: auto;
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,7 +144,7 @@ header {
   }
 
   .keypad > button{
-    width: 55px;
+    width: 50px;
     border-radius: 50%;
   }
 }
