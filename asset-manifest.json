@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/contact_front_end/static/js/main.f8de1b05.js",
-    "index.html": "/contact_front_end/index.html",
-    "main.f8de1b05.js.map": "/contact_front_end/static/js/main.f8de1b05.js.map"
+    "main.js": "/static/js/main.f8de1b05.js",
+    "index.html": "/index.html",
+    "main.f8de1b05.js.map": "/static/js/main.f8de1b05.js.map"
   },
   "entrypoints": [
     "static/js/main.f8de1b05.js"
