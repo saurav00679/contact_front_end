@@ -141,8 +141,7 @@ header {
 .change-selector{
   padding: 10px 20px;
   font-size: 12px;
-  background-color: #3498db;
-  color: #fff;
+  background-color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
