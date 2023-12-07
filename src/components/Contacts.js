@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Header from "./Header";
 import Button from "./Button";
 import ShowContact from "./ShowContact";
 import ClearIcon from '@mui/icons-material/Clear';
+import allContacts from './contacts.json'
 
 const Contacts = ()=>{
   const [contacts, setContacts] = useState([]);
@@ -13,8 +14,10 @@ const Contacts = ()=>{
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get('http://172.20.10.5:3000/contacts', { params: { searchKey: search } });
-        setContacts(result.data);
+        // to connect to backend
+        // const result = await axios.get('http://127.0.0.1:3000/contacts', { params: { searchKey: search } });
+        // setContacts(result.data);
+        setContacts(filterContacts(search));
       } catch (error) {
         console.log('Error fetching data:', error);
       }
@@ -22,9 +25,19 @@ const Contacts = ()=>{
 
     search !== '' ? fetchData() : setContacts([]);
   }, [search]);
-    
 
   const buttons = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#'];
+
+  const filterContacts = (search) => {
+    const searchLower = search.toLowerCase();
+
+    const searchedContacts = allContacts.filter(contact =>
+        contact.name.toLowerCase().includes(searchLower) ||
+        contact.contact_number.includes(searchLower)
+    );
+
+    return searchedContacts;
+  }
 
   const handleClick = (char)=>{
     const newValue = search + char;
