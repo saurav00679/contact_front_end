@@ -167,3 +167,17 @@ header {
     top: 30%;
   }
 }
+
+@media only screen and (max-height: 600px) {
+  .keypad {
+    gap: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    left: 45%;
+  }
+
+  .input-clear {
+    top: 5%;
+    left: 70%;
+  }
+}
