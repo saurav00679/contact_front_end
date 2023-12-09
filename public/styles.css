@@ -88,7 +88,7 @@ header {
 }
 
 .contacts {
-  max-height: 100px;
+  max-height: 150px;
   overflow-y: auto;
   margin-top: 30px;
   padding-top: 20px;
@@ -166,6 +166,10 @@ header {
   .input-clear {
     top: 30%;
   }
+
+  .contacts {
+    max-height: 90px;
+  }
 }
 
 @media only screen and (max-height: 600px) {
@@ -174,6 +178,10 @@ header {
     margin-left: 5%;
     margin-right: 5%;
     left: 45%;
+  }
+
+  .contacts {
+    max-height: 90px;
   }
 
   .input-clear {
