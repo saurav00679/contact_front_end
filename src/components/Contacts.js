@@ -8,7 +8,6 @@ import ClearIcon from '@mui/icons-material/Clear';
 const Contacts = ()=>{
   const [contacts, setContacts] = useState([]);
   const [search, setSearch] = useState('');
-  const [selectChar, setSelectChar] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,10 +27,6 @@ const Contacts = ()=>{
   const handleClick = (char)=>{
     const newValue = search + char;
     setSearch(newValue);
-  }
-
-  const handleSelect = () => {
-    setSelectChar((prevVal)=> !prevVal)
   }
 
   const handleChange = (event)=>{
@@ -56,10 +51,6 @@ const Contacts = ()=>{
       }
 
       <div className="input-clear">
-        <button className="change-selector" onClick={handleSelect}>
-          { selectChar ? '123' : 'abc' }
-        </button>
-
          <input 
            className='in-show'
            value={search}
@@ -72,7 +63,7 @@ const Contacts = ()=>{
 
       <div className='keypad'>
         {buttons.map((btn) => (
-          <Button key={btn} value={btn} handleClick={handleClick} selectChar={selectChar}/>
+          <Button key={btn} value={btn} handleClick={handleClick}/>
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
-const Button = ({ value, handleClick, selectChar })=>{
+const Button = ({ value, handleClick })=>{
   const mapping = {
     '1': [""],
     '2': ["a", "b", "c"],
@@ -15,30 +15,9 @@ const Button = ({ value, handleClick, selectChar })=>{
     '0': ["_"],
     '#': [""],
   };
-  const [clickCount, setClickCount] = useState(0);
-
-  const handleBtnClick = () => {
-    if(selectChar){
-      handleChar();
-    }else{
-      handleClick(value);
-    }
-  };
-
-  const handleChar = () => {
-    setClickCount((prevCount) => prevCount + 1);
-
-    setTimeout(() => {
-      const mapping_chars = mapping[value];
-      const selectedCharacter = mapping_chars[clickCount % mapping_chars.length];
-
-      handleClick(selectedCharacter === "_" ? " " : selectedCharacter);
-      setClickCount(0);
-    },700);
-  }
 
   return (
-    <button value={value} onClick={handleBtnClick}>{value}<br/>{mapping[value]}</button>
+    <button value={value} onClick={()=>handleClick(value)}>{value}<br/>{mapping[value]}</button>
   )
 }
 
