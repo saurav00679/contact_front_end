@@ -29,11 +29,6 @@ const Contacts = ()=>{
     setSearch(newValue);
   }
 
-  const handleChange = (event)=>{
-    const newValue = event.target.value;
-    setSearch(newValue);
-  }
-
   const handleClear = () => {
     setSearch(search.slice(0, -1));
   }
@@ -55,7 +50,7 @@ const Contacts = ()=>{
            className='in-show'
            value={search}
            placeholder="Enter to search..."
-           onChange={handleChange}
+           readonly
          />
 
         <button className="clear-btn" onClick={handleClear}><ClearIcon/></button>
