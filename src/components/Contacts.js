@@ -48,9 +48,9 @@ const Contacts = ()=>{
       <div className="input-clear">
          <input 
            className='in-show'
-           value={search}
+           defaultValue={search}
            placeholder="Enter to search..."
-           readonly
+           readOnly
          />
 
         <button className="clear-btn" onClick={handleClear}><ClearIcon/></button>

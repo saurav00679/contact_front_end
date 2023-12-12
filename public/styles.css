@@ -177,11 +177,13 @@ header {
     gap: 10px;
     margin-left: 5%;
     margin-right: 5%;
-    left: 45%;
   }
 
-  .contacts {
-    max-height: 90px;
+  .contacts, .no-contacts {
+    max-height: 150px;
+    position: fixed;
+    left: 10%;
+    top: 20%;
   }
 
   .input-clear {
